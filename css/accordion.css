@@ -1,0 +1,130 @@
+/* Estilizando a estrutura toda */
+.accordion {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+}
+
+/* Estilizando os labels */
+.accordion label {
+	background: #f1f1f1;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+	display: block;
+	margin-top: 1px;
+	position: relative;
+	/*display: inline-block;*/
+}
+
+/* Estilizando os strongs , os títulos */
+
+.accordion strong {
+	box-sizing: border-box;
+	display: block;
+	height: 34px;
+	margin-top: 1px;
+	padding: 7px;
+	position: relative;
+}
+
+.accordion strong::after {
+	content: "";
+	border: 7px solid transparent;
+	border-top: 10px solid #282828;
+	position: absolute;
+	top: 12px;
+	right: 15px;
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+
+/* Estilizando os inputs */
+
+.accordion input {
+	height: 34px;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+/* Estilizando a setinha do título depois de o input estiver checado */
+
+.accordion input:checked + strong:after {
+	top: 4px;
+	right: 15px;
+	
+    -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.accordion input:checked + strong + div {
+	padding: 10px 20px;
+	height: auto;
+}
+
+.accordion div {
+	background: #FFF;
+	box-sizing: border-box;
+	border-top: 1px solid #ccc;
+	height: 0;
+	padding: 0 20px;
+	overflow: hidden;
+	-webkit-transition: all .3s ease-out;
+        transition: all .3s ease-out;
+}
+
+
+/*********************************************************/
+
+.sanfona {
+	font-size: 25px;
+	font-family: courier;
+}
+
+.sanfona  label {
+	display: block;
+	background: orange;
+	border: 2px solid gray;
+}
+
+.sanfona h3 {
+	position: relative;
+	padding: 5px;
+	margin-top: 5px;
+}
+
+.sanfona h3::after {
+	content: "";
+	border: 7px solid transparent;
+	border-top: 10px solid #282828;
+	position: absolute;
+	top: 12px;
+	right: 15px;
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+
+.sanfona input:checked + h3::after {
+	top: 4px;
+	right: 15px;
+	
+    -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.sanfona input {
+	display: none;
+}
+
+.sanfona div {
+	height: 0;
+	overflow: hidden;
+	transition: 2s;
+}
+
+.sanfona input:checked ~div {
+	height: auto;
+	transition: 2s;
+}
