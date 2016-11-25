@@ -10,6 +10,10 @@ body, html {
 	height: inherit;
 }
 
+.descrition h1{
+    font-size: 30px;
+}
+
 .descrition h1,
 .descrition p {
 	width: 60%;
@@ -162,7 +166,63 @@ input {
 /**************************************************************/
 
 @media(max-width: 920px) {
-    body {
+	body{
 		font-size: 20px;
+	}
+}
+
+@media(max-width: 737px) {
+	body{
+		font-size: 16px;
+		margin: 0;
+	}
+
+	.direction li{
+		font-size: 14px;
+		width: initial;
+	    margin: 0 20px 30px;
+	}
+	.direction li::after{
+		content: initial;
+	}
+
+	.direction-r li{
+	    left: initial;
+	    width: initial;
+	    margin: 0 20px 30px;
+	}
+	.direction-r li::before{
+		content: initial;
+	}
+
+	.descrition h1, .descrition p{
+		width: initial;
+		padding: 0 20px;
+	}
+
+	ul{
+		width: initial;
+	}
+
+	ul::after{
+	    content: initial;
+	}
+
+	.presentation{
+		height: initial;
+	}
+
+	.descrition{
+		padding: 40px 0;
+	}
+
+	.timeline{
+		padding-top: 40px;
+	}
+
+	.timeline h1{
+	    margin: 0;
+	    font-size: 22px;
+	    padding: 20px 0 0;
 	}
 }
